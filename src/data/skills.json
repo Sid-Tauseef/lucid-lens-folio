@@ -1,0 +1,40 @@
+[
+  {
+    "category": "Programming Languages",
+    "skills": [
+      { "name": "JavaScript", "level": 90, "icon": "Code" },
+      { "name": "Python", "level": 85, "icon": "FileCode" },
+      { "name": "Java", "level": 80, "icon": "Coffee" },
+      { "name": "SQL", "level": 75, "icon": "Database" },
+      { "name": "HTML/CSS", "level": 95, "icon": "Layout" }
+    ]
+  },
+  {
+    "category": "Frameworks & Libraries",
+    "skills": [
+      { "name": "React.js", "level": 90, "icon": "Atom" },
+      { "name": "Node.js", "level": 85, "icon": "Server" },
+      { "name": "Express.js", "level": 80, "icon": "Zap" },
+      { "name": "Flutter", "level": 75, "icon": "Smartphone" },
+      { "name": "Tailwind CSS", "level": 90, "icon": "Palette" },
+      { "name": "Bootstrap", "level": 80, "icon": "Grid" }
+    ]
+  },
+  {
+    "category": "Databases & Cloud",
+    "skills": [
+      { "name": "MongoDB", "level": 85, "icon": "Database" },
+      { "name": "Firebase", "level": 80, "icon": "Cloud" },
+      { "name": "Cloudinary", "level": 75, "icon": "ImageIcon" }
+    ]
+  },
+  {
+    "category": "Tools & Technologies",
+    "skills": [
+      { "name": "Git & GitHub", "level": 90, "icon": "GitBranch" },
+      { "name": "FastAPI", "level": 80, "icon": "Rocket" },
+      { "name": "Stripe", "level": 70, "icon": "CreditCard" },
+      { "name": "Machine Learning", "level": 75, "icon": "Brain" }
+    ]
+  }
+]

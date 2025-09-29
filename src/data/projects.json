@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "SkillShareMarket Platform",
+    "description": "Built a platform for users to offer and request freelance services, featuring service listings, secure payments, and media management. Enabled smooth user authentication and transaction flow with real-time updates.",
+    "technologies": ["ReactJS", "ExpressJS", "MongoDB", "Stripe", "Cloudinary"],
+    "github": "https://github.com/Sid-Tauseef/FREELANCER",
+    "live": null,
+    "image": "/images/projects/skillshare.jpg",
+    "featured": true,
+    "category": "Full Stack"
+  },
+  {
+    "id": 2,
+    "title": "Diabetes Prediction System",
+    "description": "Predicts diabetes likelihood with 77% accuracy using an SVM model. Integrated with a Flutter frontend for quick and accessible health screening.",
+    "technologies": ["Flutter", "Python", "pickle", "FastAPI", "CORSMiddleware", "pydantic"],
+    "github": "https://github.com/Sid-Tauseef/DIABETES",
+    "live": null,
+    "image": "/images/projects/diabetes.jpg",
+    "featured": true,
+    "category": "Machine Learning"
+  },
+  {
+    "id": 3,
+    "title": "NewsInsights App",
+    "description": "Developed an app with personalized news recommendations, categorization, and summarization from articles. Integrated a fake news detection module using NLP.",
+    "technologies": ["Flutter", "Python", "FastAPI", "NLP"],
+    "github": "https://github.com/Sid-Tauseef/NEWS",
+    "live": null,
+    "image": "/images/projects/news.jpg",
+    "featured": true,
+    "category": "Mobile Development"
+  },
+  {
+    "id": 4,
+    "title": "Mozzam Arts Showcase",
+    "description": "Built a responsive landing page to showcase client artworks with smooth navigation and modern UI. Optimized for fast loading and mobile performance.",
+    "technologies": ["ReactJS", "Firebase", "Cloudinary"],
+    "github": null,
+    "live": "https://mozzamarts.com",
+    "image": "/images/projects/mozzam.jpg",
+    "featured": false,
+    "category": "Web Development"
+  }
+]

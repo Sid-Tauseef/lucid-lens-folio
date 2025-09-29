@@ -34,102 +34,152 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
+      {/* Geometric Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 right-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+        <div className="absolute top-1/4 right-0 w-px h-32 bg-gradient-to-b from-accent/20 to-transparent"></div>
+        <div className="absolute bottom-1/4 left-0 w-px h-24 bg-gradient-to-t from-primary/20 to-transparent"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold glow-text mb-6">
-            About Me
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate developer with a strong foundation in both frontend and backend technologies, 
-            combined with expertise in machine learning and data science.
-          </p>
-        </div>
+        {/* Diagonal Layout */}
+        <div className="grid lg:grid-cols-12 gap-8 items-start">
+          {/* Left Column - Title & Journey */}
+          <div className="lg:col-span-8 space-y-12">
+            {/* Section Title */}
+            <div className="relative">
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-px bg-primary"></div>
+                <h2 className="text-5xl md:text-6xl font-black text-foreground">
+                  ABOUT
+                </h2>
+                <div className="flex-1 h-px bg-gradient-to-r from-primary/50 to-transparent"></div>
+              </div>
+              <div className="mt-2 ml-20">
+                <span className="text-lg text-accent font-medium tracking-widest">THE STORY</span>
+              </div>
+            </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Story */}
-          <div className="space-y-6">
-            <div className="glass-card p-8 animate-fade-in">
-              <h3 className="text-2xl font-bold mb-4 text-primary">My Journey</h3>
-              <div className="space-y-4 text-muted-foreground">
-                <p>
-                  As a recent Information Technology graduate from M.H. Saboo Siddik College of Engineering, 
-                  I've maintained an impressive CGPA of 9.05/10.0 while diving deep into the world of 
-                  software development and machine learning.
+            {/* Story in Magazine Style */}
+            <div className="space-y-8">
+              {/* Intro Quote */}
+              <div className="glass-card p-6 border-l-4 border-primary">
+                <p className="text-xl italic text-muted-foreground leading-relaxed">
+                  "Bridging creativity and technology through code, transforming ideas into digital reality."
                 </p>
-                <p>
-                  My journey began with web development, where I discovered my passion for creating 
-                  user-friendly applications using React.js and Node.js. This naturally evolved into 
-                  exploring the backend ecosystem with Express.js and MongoDB, allowing me to build 
-                  full-stack applications.
-                </p>
-                <p>
-                  What sets me apart is my ability to bridge the gap between traditional web development 
-                  and cutting-edge AI/ML technologies. I've successfully developed machine learning models 
-                  with impressive accuracy rates and integrated them seamlessly into mobile applications.
-                </p>
-                <p>
-                  Currently based in Mumbai, I'm eager to contribute my technical expertise and 
-                  creative problem-solving skills to real-world challenges while continuing to 
-                  learn and grow in this ever-evolving field.
-                </p>
+              </div>
+
+              {/* Story Blocks */}
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="glass-card p-6 space-y-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                      <span className="text-sm font-bold text-primary-foreground">01</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-primary">The Beginning</h3>
+                  </div>
+                  <p className="text-muted-foreground">
+                    IT graduate from M.H. Saboo Siddik College with 9.05 CGPA. Started with curiosity about 
+                    how things work behind the screen.
+                  </p>
+                </div>
+
+                <div className="glass-card p-6 space-y-4 md:mt-12">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                      <span className="text-sm font-bold text-accent-foreground">02</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-accent">The Evolution</h3>
+                  </div>
+                  <p className="text-muted-foreground">
+                    Mastered full-stack development with React.js, Node.js, and Express.js. 
+                    Built applications that solve real-world problems.
+                  </p>
+                </div>
+
+                <div className="glass-card p-6 space-y-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                      <span className="text-sm font-bold text-primary-foreground">03</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-primary">The Innovation</h3>
+                  </div>
+                  <p className="text-muted-foreground">
+                    Expanded into ML/AI, developing models with high accuracy rates and 
+                    integrating them into mobile applications.
+                  </p>
+                </div>
+
+                <div className="glass-card p-6 space-y-4 md:mt-12">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                      <span className="text-sm font-bold text-accent-foreground">04</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-accent">The Future</h3>
+                  </div>
+                  <p className="text-muted-foreground">
+                    Ready to create impactful digital solutions while staying at the 
+                    forefront of technological advancement.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Education & Achievements */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-accent mb-8">Education & Achievements</h3>
-            <div className="grid gap-6">
-              {achievements.map((achievement, index) => (
-                <div
-                  key={index}
-                  className="glass-card p-6 hover:scale-105 transition-all duration-300 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className={`p-3 rounded-lg bg-glass-bg/50 ${achievement.color}`}>
-                      <achievement.icon className="h-6 w-6" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-foreground mb-1">
-                        {achievement.title}
-                      </h4>
-                      <p className="text-sm font-medium text-primary mb-2">
+          {/* Right Column - Achievements Sidebar */}
+          <div className="lg:col-span-4 space-y-6">
+            <div className="sticky top-8">
+              <h3 className="text-2xl font-bold text-accent mb-6 flex items-center">
+                <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                MILESTONES
+              </h3>
+              
+              <div className="space-y-4">
+                {achievements.map((achievement, index) => (
+                  <div
+                    key={index}
+                    className="relative pl-6 pb-6 border-l-2 border-glass-border last:border-l-0 last:pb-0 group hover:border-primary transition-colors duration-300"
+                  >
+                    {/* Timeline dot */}
+                    <div className={`absolute -left-2 top-0 w-4 h-4 rounded-full ${achievement.color === 'text-primary' ? 'bg-primary' : 'bg-accent'} group-hover:scale-125 transition-transform duration-300`}></div>
+                    
+                    <div className="glass-card p-4 hover:scale-105 transition-all duration-300">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <achievement.icon className={`h-4 w-4 ${achievement.color}`} />
+                        <h4 className="font-semibold text-foreground text-sm">
+                          {achievement.title}
+                        </h4>
+                      </div>
+                      <p className="text-xs font-medium text-primary mb-1">
                         {achievement.subtitle}
                       </p>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-xs text-muted-foreground">
                         {achievement.description}
                       </p>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+                ))}
+              </div>
 
-        {/* Contact Info */}
-        <div className="mt-16 text-center">
-          <div className="glass-card p-8 max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold mb-4 text-foreground">Get In Touch</h3>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 text-muted-foreground">
-              <div className="flex items-center space-x-2">
-                <span className="font-medium">📍</span>
-                <span>Mumbai, India</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="font-medium">📞</span>
-                <span>+91 965 324 99 73</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="font-medium">✉️</span>
-                <span>sidtauseef20020204@gmail.com</span>
+              {/* Contact Quick Info */}
+              <div className="mt-8 glass-card p-6">
+                <h4 className="font-bold text-foreground mb-4 text-sm uppercase tracking-wide">
+                  Quick Contact
+                </h4>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-muted-foreground">Mumbai, India</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">+91 965 324 99 73</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    <span className="text-muted-foreground text-xs">sidtauseef20020204@gmail.com</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

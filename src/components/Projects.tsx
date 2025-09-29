@@ -36,17 +36,17 @@ const Projects = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Creative Header */}
-        <div className="mb-16">
-          <div className="flex items-end justify-between mb-8">
+        <div className="mb-12 lg:mb-16">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-6 lg:mb-8 space-y-6 lg:space-y-0">
             <div>
-              <div className="flex items-center space-x-4 mb-4">
+              <div className="flex flex-col lg:flex-row lg:items-center space-y-2 lg:space-y-0 lg:space-x-4 mb-4 text-center lg:text-left">
                 <span className="text-4xl">🚀</span>
                 <div className="space-y-1">
-                  <h2 className="text-4xl md:text-6xl font-black text-foreground">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-foreground">
                     PROJECTS
                   </h2>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-12 h-px bg-primary"></div>
+                  <div className="flex items-center justify-center lg:justify-start space-x-2">
+                    <div className="hidden lg:block w-12 h-px bg-primary"></div>
                     <span className="text-sm text-accent font-medium tracking-widest">SELECTED WORKS</span>
                   </div>
                 </div>
@@ -54,7 +54,7 @@ const Projects = () => {
             </div>
             
             {/* Filter Pills */}
-            <div className="hidden md:flex flex-wrap gap-2">
+            <div className="hidden lg:flex flex-wrap gap-2 justify-center lg:justify-end">
               {categories.map((category) => (
                 <button
                   key={category}
@@ -72,7 +72,7 @@ const Projects = () => {
           </div>
 
           {/* Mobile Filter */}
-          <div className="md:hidden flex flex-wrap gap-2 mb-8">
+          <div className="lg:hidden flex flex-wrap gap-2 mb-6 lg:mb-8 justify-center">
             {categories.map((category) => (
               <button
                 key={category}
@@ -90,26 +90,26 @@ const Projects = () => {
         </div>
 
         {/* Bento Grid Layout */}
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
           {filteredProjects.map((project, index) => {
             const isLarge = index === 0 || index === 3;
-            const gridClass = isLarge ? "lg:col-span-2 lg:row-span-1" : "lg:col-span-1";
+            const gridClass = isLarge ? "lg:col-span-2" : "lg:col-span-1";
             
             return (
               <div
                 key={project.id}
-                className={`${gridClass} glass-card p-6 group hover:scale-[1.02] transition-all duration-500 animate-fade-in cursor-pointer`}
+                className={`${gridClass} glass-card p-4 lg:p-6 group hover:scale-[1.02] transition-all duration-500 animate-fade-in cursor-pointer`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Project Layout */}
-                <div className={`${isLarge ? 'grid md:grid-cols-2 gap-6' : 'space-y-4'} h-full`}>
+                <div className={`${isLarge ? 'grid lg:grid-cols-2 gap-4 lg:gap-6' : 'space-y-4'} h-full`}>
                   {/* Image Section */}
-                  <div className={`relative overflow-hidden rounded-lg ${isLarge ? 'order-2' : ''}`}>
+                  <div className={`relative overflow-hidden rounded-lg ${isLarge ? 'lg:order-2' : ''}`}>
                     <img
                       src={project.image}
                       alt={project.title}
                       className={`w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
-                        isLarge ? 'h-64' : 'h-40'
+                        isLarge ? 'h-48 lg:h-64' : 'h-40 lg:h-48'
                       }`}
                     />
                     
@@ -155,16 +155,16 @@ const Projects = () => {
                   </div>
 
                   {/* Content Section */}
-                  <div className={`${isLarge ? 'order-1' : ''} flex flex-col justify-between`}>
+                  <div className={`${isLarge ? 'lg:order-1' : ''} flex flex-col justify-between`}>
                     <div className="space-y-3">
                       <h3 className={`font-bold text-foreground group-hover:text-primary transition-colors duration-300 ${
-                        isLarge ? 'text-2xl' : 'text-lg'
+                        isLarge ? 'text-xl lg:text-2xl' : 'text-lg'
                       }`}>
                         {project.title}
                       </h3>
                       
                       <p className={`text-muted-foreground leading-relaxed ${
-                        isLarge ? 'text-base' : 'text-sm'
+                        isLarge ? 'text-sm lg:text-base' : 'text-sm'
                       }`}>
                         {project.description}
                       </p>
@@ -173,7 +173,7 @@ const Projects = () => {
                     {/* Tech Stack */}
                     <div className="mt-4">
                       <div className="flex flex-wrap gap-2">
-                        {project.technologies.slice(0, isLarge ? 6 : 4).map((tech, techIndex) => (
+                        {project.technologies.slice(0, isLarge ? 6 : 3).map((tech, techIndex) => (
                           <span
                             key={techIndex}
                             className="px-2 py-1 bg-glass-bg/50 text-accent text-xs rounded border border-glass-border/30"
@@ -181,9 +181,9 @@ const Projects = () => {
                             {tech}
                           </span>
                         ))}
-                        {project.technologies.length > (isLarge ? 6 : 4) && (
+                        {project.technologies.length > (isLarge ? 6 : 3) && (
                           <span className="px-2 py-1 text-muted-foreground text-xs">
-                            +{project.technologies.length - (isLarge ? 6 : 4)}
+                            +{project.technologies.length - (isLarge ? 6 : 3)}
                           </span>
                         )}
                       </div>
@@ -196,7 +196,7 @@ const Projects = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 text-center">
+        <div className="mt-12 lg:mt-20 text-center">
           <div className="inline-flex items-center space-x-4 glass-card p-8 hover:scale-105 transition-transform duration-300">
             <div>
               <h3 className="text-xl font-bold text-foreground mb-2">

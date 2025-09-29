@@ -83,50 +83,50 @@ const Contact = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Split Layout Header */}
-        <div className="grid lg:grid-cols-2 gap-16 items-end mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end mb-12 lg:mb-16">
           <div>
-            <div className="flex items-center space-x-4 mb-4">
+            <div className="flex flex-col lg:flex-row lg:items-center space-y-2 lg:space-y-0 lg:space-x-4 mb-4 text-center lg:text-left">
               <span className="text-4xl">📬</span>
               <div>
-                <h2 className="text-4xl md:text-6xl font-black text-foreground">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-foreground">
                   GET IN
                 </h2>
-                <h2 className="text-4xl md:text-6xl font-black glow-text -mt-2">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black glow-text -mt-1 lg:-mt-2">
                   TOUCH
                 </h2>
               </div>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-16 h-px bg-accent"></div>
+            <div className="flex items-center justify-center lg:justify-start space-x-2">
+              <div className="hidden lg:block w-16 h-px bg-accent"></div>
               <span className="text-sm text-muted-foreground tracking-widest">LET'S CONNECT</span>
             </div>
           </div>
           
-          <div className="text-right">
-            <p className="text-lg text-muted-foreground max-w-md ml-auto">
+          <div className="text-center lg:text-right">
+            <p className="text-base lg:text-lg text-muted-foreground max-w-md mx-auto lg:ml-auto">
               Ready to turn ideas into reality? Let's discuss your next project over coffee ☕
             </p>
           </div>
         </div>
 
         {/* Creative Grid Layout */}
-        <div className="grid lg:grid-cols-12 gap-8">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Contact Information - Left Sidebar */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-4 space-y-4 lg:space-y-6 order-2 lg:order-1">
             {/* Quick Contact */}
-            <div className="glass-card p-6 space-y-6">
+            <div className="glass-card p-4 lg:p-6 space-y-4 lg:space-y-6">
               <h3 className="text-lg font-bold text-primary flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse"></div>
                 CONTACT INFO
               </h3>
               
               {contactInfo.map((info, index) => (
-                <div key={index} className="group">
+                <div key={index} className="group text-center lg:text-left">
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 glass-card rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-8 h-8 lg:w-10 lg:h-10 glass-card rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mx-auto lg:mx-0">
                       <info.icon className="h-4 w-4 text-accent" />
                     </div>
-                    <div>
+                    <div className="flex-1 lg:flex-none">
                       <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">
                         {info.label}
                       </div>
@@ -147,7 +147,7 @@ const Contact = () => {
             </div>
 
             {/* Social & Availability */}
-            <div className="glass-card p-6 space-y-6">
+            <div className="glass-card p-4 lg:p-6 space-y-4 lg:space-y-6">
               <h4 className="text-lg font-bold text-accent flex items-center">
                 <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
                 SOCIAL LINKS
@@ -160,9 +160,9 @@ const Contact = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-4 group hover:scale-105 transition-all duration-300"
+                    className="flex items-center justify-center lg:justify-start space-x-4 group hover:scale-105 transition-all duration-300"
                   >
-                    <div className="w-10 h-10 glass-card rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 lg:w-10 lg:h-10 glass-card rounded-full flex items-center justify-center">
                       <link.icon className="h-4 w-4 text-foreground group-hover:text-primary transition-colors duration-300" />
                     </div>
                     <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-300">
@@ -174,7 +174,7 @@ const Contact = () => {
 
               {/* Availability Status */}
               <div className="pt-4 border-t border-glass-border/50">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center justify-center lg:justify-start space-x-3">
                   <div className="flex space-x-1">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: "0.5s" }}></div>
@@ -187,8 +187,8 @@ const Contact = () => {
           </div>
 
           {/* Contact Form - Main Area */}
-          <div className="lg:col-span-8">
-            <div className="glass-card p-8">
+          <div className="lg:col-span-8 order-1 lg:order-2">
+            <div className="glass-card p-6 lg:p-8">
               <div className="flex items-center justify-between mb-8">
                 <h3 className="text-2xl font-bold text-foreground">Send Message</h3>
                 <div className="text-2xl">✨</div>
@@ -196,7 +196,7 @@ const Contact = () => {
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name & Email Row */}
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="block text-sm font-bold text-foreground uppercase tracking-wide">
                       Name *
@@ -208,7 +208,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="glass-card border-glass-border bg-transparent focus:ring-primary h-12"
+                      className="glass-card border-glass-border bg-transparent focus:ring-primary h-10 lg:h-12"
                       placeholder="Your full name"
                     />
                   </div>
@@ -224,7 +224,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="glass-card border-glass-border bg-transparent focus:ring-primary h-12"
+                      className="glass-card border-glass-border bg-transparent focus:ring-primary h-10 lg:h-12"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -242,7 +242,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="glass-card border-glass-border bg-transparent focus:ring-primary h-12"
+                    className="glass-card border-glass-border bg-transparent focus:ring-primary h-10 lg:h-12"
                     placeholder="Project discussion, collaboration, etc."
                   />
                 </div>
@@ -259,7 +259,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="glass-card border-glass-border bg-transparent focus:ring-primary resize-none"
+                    className="glass-card border-glass-border bg-transparent focus:ring-primary resize-none text-sm lg:text-base"
                     placeholder="Tell me about your project, timeline, budget, and what you're looking for..."
                   />
                 </div>
@@ -269,7 +269,7 @@ const Contact = () => {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full glass-button h-14 text-lg group relative overflow-hidden"
+                    className="w-full glass-button h-12 lg:h-14 text-base lg:text-lg group relative overflow-hidden"
                   >
                     <span className="relative z-10 flex items-center justify-center">
                       {isSubmitting ? (
@@ -292,7 +292,7 @@ const Contact = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center">
+        <div className="mt-12 lg:mt-16 text-center">
           <div className="inline-flex items-center space-x-6 glass-card p-6 hover:scale-105 transition-transform duration-300">
             <div className="text-3xl">🤝</div>
             <div>

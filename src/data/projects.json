@@ -6,7 +6,7 @@
     "technologies": ["ReactJS", "ExpressJS", "MongoDB", "Stripe", "Cloudinary"],
     "github": "https://github.com/Sid-Tauseef/FREELANCER",
     "live": null,
-    "image": "/images/projects/skillshare.jpg",
+    "image": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
     "featured": true,
     "category": "Full Stack"
   },
@@ -17,7 +17,7 @@
     "technologies": ["Flutter", "Python", "pickle", "FastAPI", "CORSMiddleware", "pydantic"],
     "github": "https://github.com/Sid-Tauseef/DIABETES",
     "live": null,
-    "image": "/images/projects/diabetes.jpg",
+    "image": "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800",
     "featured": true,
     "category": "Machine Learning"
   },
@@ -28,7 +28,7 @@
     "technologies": ["Flutter", "Python", "FastAPI", "NLP"],
     "github": "https://github.com/Sid-Tauseef/NEWS",
     "live": null,
-    "image": "/images/projects/news.jpg",
+    "image": "https://images.pexels.com/photos/97050/pexels-photo-97050.jpeg?auto=compress&cs=tinysrgb&w=800",
     "featured": true,
     "category": "Mobile Development"
   },
@@ -39,7 +39,7 @@
     "technologies": ["ReactJS", "Firebase", "Cloudinary"],
     "github": null,
     "live": "https://mozzamarts.com",
-    "image": "/images/projects/mozzam.jpg",
+    "image": "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800",
     "featured": false,
     "category": "Web Development"
   }

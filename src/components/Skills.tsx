@@ -52,17 +52,17 @@ const Skills = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold glow-text mb-6">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold glow-text mb-4 lg:mb-6">
             Technical Skills
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             A comprehensive overview of my technical expertise across various domains
           </p>
         </div>
 
         {/* Modern Masonry Grid Layout */}
-        <div className="columns-1 md:columns-2 xl:columns-3 gap-8 space-y-8">
+        <div className="columns-1 lg:columns-2 xl:columns-3 gap-6 lg:gap-8 space-y-6 lg:space-y-8">
           {(skillsData as SkillCategory[]).map((category, categoryIndex) => {
             const skillCount = category.skills.length;
             const isLargeCategory = skillCount > 4;
@@ -70,7 +70,7 @@ const Skills = () => {
             return (
               <div
                 key={category.category}
-                className={`glass-card p-6 break-inside-avoid mb-8 group hover:scale-[1.02] transition-all duration-500 hover:shadow-glow cursor-pointer ${
+                className={`glass-card p-4 lg:p-6 break-inside-avoid mb-6 lg:mb-8 group hover:scale-[1.02] transition-all duration-500 hover:shadow-glow cursor-pointer ${
                   isLargeCategory ? 'md:col-span-1' : ''
                 }`}
                 style={{ 
@@ -80,16 +80,16 @@ const Skills = () => {
               >
                 <div className="relative overflow-hidden">
                   {/* Category Header with Enhanced Design */}
-                  <div className="text-center mb-6 relative">
+                  <div className="text-center mb-4 lg:mb-6 relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <h3 className="text-xl font-bold glow-text relative z-10 group-hover:scale-105 transition-transform duration-300">
+                    <h3 className="text-lg lg:text-xl font-bold glow-text relative z-10 group-hover:scale-105 transition-transform duration-300">
                       {category.category}
                     </h3>
                     <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-accent mx-auto mt-3 group-hover:w-20 transition-all duration-500" />
                   </div>
                   
                   {/* Interactive Skills Grid */}
-                  <div className="space-y-5">
+                  <div className="space-y-3 lg:space-y-5">
                     {category.skills.map((skill, skillIndex) => {
                       const IconComponent = getIcon(skill.icon);
                       
@@ -103,20 +103,20 @@ const Skills = () => {
                           }}
                         >
                           {/* Skill Item with Micro-interactions */}
-                          <div className="flex items-center justify-between mb-3 relative z-10">
+                          <div className="flex items-center justify-between mb-2 lg:mb-3 relative z-10">
                             <div className="flex items-center space-x-3">
                               <div className="relative p-2.5 rounded-xl bg-gradient-to-br from-glass-bg/70 to-glass-bg/30 
                                             border border-glass-border/30 group-hover/skill:border-primary/50
                                             group-hover/skill:shadow-[0_0_20px_hsla(var(--primary),0.3)]
                                             transition-all duration-300 group-hover/skill:scale-110">
-                                <IconComponent className="h-4 w-4 text-accent group-hover/skill:text-primary 
+                                <IconComponent className="h-3 w-3 lg:h-4 lg:w-4 text-accent group-hover/skill:text-primary 
                                                          transition-all duration-300 group-hover/skill:rotate-12" />
                                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 
                                                rounded-xl opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300" />
                               </div>
                               <span className="font-medium text-foreground group-hover/skill:text-primary 
                                              transition-colors duration-300 group-hover/skill:translate-x-1 
-                                             transform transition-transform">
+                                             transform transition-transform text-sm lg:text-base">
                                 {skill.name}
                               </span>
                             </div>
@@ -132,7 +132,7 @@ const Skills = () => {
                           </div>
                           
                           {/* Enhanced Progress Bar with Gradient Animation */}
-                          <div className="relative w-full bg-glass-bg/20 rounded-full h-2.5 overflow-hidden 
+                          <div className="relative w-full bg-glass-bg/20 rounded-full h-2 lg:h-2.5 overflow-hidden 
                                         shadow-inner border border-glass-border/20">
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent 
                                           translate-x-[-100%] group-hover/skill:translate-x-[200%] transition-transform 
@@ -163,7 +163,7 @@ const Skills = () => {
                   </div>
                   
                   {/* Category Stats */}
-                  <div className="mt-6 pt-4 border-t border-glass-border/30">
+                  <div className="mt-4 lg:mt-6 pt-3 lg:pt-4 border-t border-glass-border/30">
                     <div className="flex justify-between items-center text-xs text-muted-foreground">
                       <span className="flex items-center space-x-1">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -184,7 +184,7 @@ const Skills = () => {
         </div>
 
         {/* Enhanced Skills Summary with Interactive Cards */}
-        <div className="mt-20 grid md:grid-cols-3 gap-8">
+        <div className="mt-12 lg:mt-20 grid sm:grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           <div className="glass-card p-8 text-center group hover:scale-105 hover:rotate-1 transition-all duration-500 cursor-pointer">
             <div className="relative mb-4">
               <div className="text-4xl font-bold glow-text mb-2 group-hover:scale-110 transition-transform duration-300">4+</div>

@@ -43,34 +43,34 @@ const About = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Diagonal Layout */}
-        <div className="grid lg:grid-cols-12 gap-8 items-start">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column - Title & Journey */}
-          <div className="lg:col-span-8 space-y-12">
+          <div className="lg:col-span-8 space-y-8 lg:space-y-12">
             {/* Section Title */}
             <div className="relative">
-              <div className="flex items-center space-x-4">
-                <div className="w-16 h-px bg-primary"></div>
-                <h2 className="text-5xl md:text-6xl font-black text-foreground">
+              <div className="flex flex-col lg:flex-row lg:items-center space-y-2 lg:space-y-0 lg:space-x-4">
+                <div className="hidden lg:block w-16 h-px bg-primary"></div>
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground text-center lg:text-left">
                   ABOUT
                 </h2>
-                <div className="flex-1 h-px bg-gradient-to-r from-primary/50 to-transparent"></div>
+                <div className="hidden lg:block flex-1 h-px bg-gradient-to-r from-primary/50 to-transparent"></div>
               </div>
-              <div className="mt-2 ml-20">
+              <div className="mt-2 text-center lg:text-left lg:ml-20">
                 <span className="text-lg text-accent font-medium tracking-widest">THE STORY</span>
               </div>
             </div>
 
             {/* Story in Magazine Style */}
-            <div className="space-y-8">
+            <div className="space-y-6 lg:space-y-8">
               {/* Intro Quote */}
               <div className="glass-card p-6 border-l-4 border-primary">
-                <p className="text-xl italic text-muted-foreground leading-relaxed">
+                <p className="text-lg lg:text-xl italic text-muted-foreground leading-relaxed text-center lg:text-left">
                   "Bridging creativity and technology through code, transforming ideas into digital reality."
                 </p>
               </div>
 
               {/* Story Blocks */}
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                 <div className="glass-card p-6 space-y-4">
                   <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
@@ -84,7 +84,7 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="glass-card p-6 space-y-4 md:mt-12">
+                <div className="glass-card p-6 space-y-4 lg:mt-12">
                   <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
                       <span className="text-sm font-bold text-accent-foreground">02</span>
@@ -110,7 +110,7 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="glass-card p-6 space-y-4 md:mt-12">
+                <div className="glass-card p-6 space-y-4 lg:mt-12">
                   <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
                       <span className="text-sm font-bold text-accent-foreground">04</span>
@@ -127,7 +127,7 @@ const About = () => {
           </div>
 
           {/* Right Column - Achievements Sidebar */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-4 space-y-6 mt-8 lg:mt-0">
             <div className="sticky top-8">
               <h3 className="text-2xl font-bold text-accent mb-6 flex items-center">
                 <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
